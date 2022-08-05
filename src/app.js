@@ -33,14 +33,14 @@ process.on('SIGINT', () => {
     });
 });
 
-// Load models
-const Mentions = require('./models/mentions');
-
-// Load routes
+// Load models 
+const Mentions = require('./models/mentions');  
+ 
+// Load routes 
 const indexRoutes = require('./routes/index-routes');
 app.use('/', indexRoutes);
 const mentionsRoutes = require('./routes/mentions-routes');
-app.use('/', mentionsRoutes);
+app.use('/mentions', mentionsRoutes);
 
 
 module.exports = app;

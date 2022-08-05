@@ -7,7 +7,7 @@ exports.listMentions = async (req, res) => {
     const data = await Mentions.find({});
     res.status(200).send(data);
   } catch (e) {
-    res.status(500).send({message: 'Falha ao carregar as menções.'});
+    res.status(500).send({message: 'Falha ao carregar as menções. Erro 5001'});
   }
 };
 
@@ -25,6 +25,6 @@ exports.createMention = async (req, res) => {
 
     res.status(201).send({message: 'Menção cadastrada com sucesso!'});
   } catch (e) {
-    res.status(500).send({message: 'Falha ao cadastrar a menção.'});
+    res.status(500).send({message: 'Falha ao cadastrar a menção. erro 5002'});
   }
 };

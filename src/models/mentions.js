@@ -3,13 +3,12 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema({
   friend: {
-    type: String,
-    required: true,
-    trim: true
+    type: String
+    
   },
   mention: {
-    type: String,
-    required: true
+    type: String
+
   }
 });
 
